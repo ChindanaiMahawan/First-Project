@@ -14,12 +14,10 @@
         label="Go to Second Page"
         no-caps
       />
-
-      <h1
-      class = "q-mt-md"
-      label = "Carl Johnson"
-      />
     </div>
+    <h4>
+      "Carl Johnson"
+    </h4>
   </q-page>
 </template>
 
