@@ -3,7 +3,7 @@
     <div class="column items-center">
       <img
         alt="Carl Johnson"
-        src="~@/assets/CJ.jpg"
+        src="~@/assets/ah-shit-here-we-go-again-ah-shit.gif"
         style="width: 200px; height: 200px"
       />
 
