@@ -1,26 +1,74 @@
 <template>
-  <q-page class="flex flex-center">
-    <div class="column items-center">
-      <img
-        alt="Carl Johnson"
-        src="~@/assets/ah-shit-here-we-go-again-ah-shit.gif"
-        style="width: 498px; height: 323px"
+  <div class="q-pa-md" style="max-width: 400px">
+    <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
+      <q-input
+        filled
+        v-model="name"
+        label="Your name *"
+        hint="Name and surname"
+        lazy-rules
+        :rules="[val => (val && val.length > 0) || 'Please type something']"
       />
 
-      <q-btn
-        class="q-mt-md"
-        color="primary"
-        to="/second"
-        label="Go to Second Page"
-        no-caps
+      <q-input
+        filled
+        type="number"
+        v-model.number="age"
+        label="Your age *"
+        lazy-rules
+        :rules="[
+          val => (val !== null && val !== '') || 'Please type your age',
+          val => (val > 0 && val < 100) || 'Please type a real age'
+        ]"
       />
-    </div>
-    <h4>
-      "Carl Johnson"
-    </h4>
-  </q-page>
+
+      <q-toggle v-model="accept" label="I accept the license and terms" />
+
+      <div>
+        <q-btn label="Submit" type="submit" color="primary" />
+        <q-btn
+          label="Reset"
+          type="reset"
+          color="primary"
+          flat
+          class="q-ml-sm"
+        />
+      </div>
+    </q-form>
+  </div>
 </template>
 
 <script setup>
-//
+import { useQuasar } from 'quasar'
+import { ref } from 'vue'
+
+const $q = useQuasar()
+
+const name = ref(null)
+const age = ref(null)
+const accept = ref(false)
+
+function onSubmit() {
+  if (accept.value !== true) {
+    $q.notify({
+      color: 'red-5',
+      textColor: 'white',
+      icon: 'warning',
+      message: 'You need to accept the license and terms first'
+    })
+  } else {
+    $q.notify({
+      color: 'green-4',
+      textColor: 'white',
+      icon: 'cloud_done',
+      message: 'Submitted'
+    })
+  }
+}
+
+function onReset() {
+  name.value = null
+  age.value = null
+  accept.value = false
+}
 </script>
