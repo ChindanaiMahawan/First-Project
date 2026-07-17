@@ -4,7 +4,7 @@
       <img
         alt="Carl Johnson"
         src="~@/assets/ah-shit-here-we-go-again-ah-shit.gif"
-        style="width: 200px; height: 200px"
+        style="width: 498px; height: 323px"
       />
 
       <q-btn
