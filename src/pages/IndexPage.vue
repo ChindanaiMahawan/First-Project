@@ -1,6 +1,7 @@
 <template>
   <div class="q-pa-md" style="max-width: 400px">
   <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
+    <img :src="cjImage" />
     <q-input
       filled
       v-model="name"
@@ -39,6 +40,7 @@
 </template>
 
 <script setup>
+import cjImage from '../assets/CJ.jpg'
 import { useQuasar } from 'quasar'
 import { ref } from 'vue'
 
