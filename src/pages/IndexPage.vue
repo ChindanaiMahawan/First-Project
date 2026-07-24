@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <div class="display-flex">
+    <div class="display-flex justify-center">
       <img src="/src/assets/CJ.jpg" />
     </div>
     <div class="q-gutter-y-md column" style="max-width: 300px">
