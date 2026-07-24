@@ -4,13 +4,13 @@
       <img src="/src/assets/CJ.jpg" />
     </div>
     <div class="q-gutter-y-md column" style="max-width: 300px">
-      <q-input color="purple-12" v-model="text" label="Label">
+      <q-input color="red-12" v-model="text" label="Label">
         <template v-slot:prepend>
           <q-icon name="event" />
         </template>
       </q-input>
 
-      <q-input color="teal" filled v-model="text" label="Label">
+      <q-input color="purple-12" filled v-model="text" label="Label">
         <template v-slot:prepend>
           <q-icon name="event" />
         </template>
@@ -18,13 +18,13 @@
 
       <q-input
         color="grey-3"
-        label-color="orange"
+        label-color="blue"
         outlined
         v-model="text"
         label="Label"
       >
         <template v-slot:append>
-          <q-icon name="event" color="orange" />
+          <q-icon name="event" color="red" />
         </template>
       </q-input>
 
