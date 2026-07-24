@@ -4,13 +4,13 @@
       <img src="/src/assets/CJ.jpg" />
     </div>
     <div class="q-gutter-y-md column" style="max-width: 300px">
-      <q-input color="purple-12" v-model="text" label="Label">
+      <q-input color="purple-12" v-model="text" label="Label  (ชื่อ)">
         <template v-slot:prepend>
           <q-icon name="event" />
         </template>
       </q-input>
 
-      <q-input color="teal" filled v-model="text" label="Label">
+      <q-input color="teal" filled v-model="text" label="Label (นามสกุล)">
         <template v-slot:prepend>
           <q-icon name="event" />
         </template>
